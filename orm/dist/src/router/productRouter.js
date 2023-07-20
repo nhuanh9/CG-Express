@@ -4,8 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const productController_1 = __importDefault(require("../controller/productController"));
+const ProductController_1 = __importDefault(require("../controller/ProductController"));
 const productRouter = (0, express_1.Router)();
-productRouter.get('/', productController_1.default.findAll);
+productRouter.get('', ProductController_1.default.findAll);
 exports.default = productRouter;
-//# sourceMappingURL=productRouter.js.map
+//# sourceMappingURL=ProductRouter.js.map

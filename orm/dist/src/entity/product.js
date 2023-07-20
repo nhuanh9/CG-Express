@@ -9,31 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProductPro = void 0;
+exports.Product = void 0;
 const typeorm_1 = require("typeorm");
-let ProductPro = exports.ProductPro = class ProductPro {
+let Product = exports.Product = class Product {
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
-], ProductPro.prototype, "id", void 0);
+], Product.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'varchar', length: 255 }),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], ProductPro.prototype, "name", void 0);
+], Product.prototype, "name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
-], ProductPro.prototype, "price", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: 'text' }),
-    __metadata("design:type", String)
-], ProductPro.prototype, "image", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: 'int' }),
-    __metadata("design:type", Number)
-], ProductPro.prototype, "category", void 0);
-exports.ProductPro = ProductPro = __decorate([
+], Product.prototype, "price", void 0);
+exports.Product = Product = __decorate([
     (0, typeorm_1.Entity)()
-], ProductPro);
-//# sourceMappingURL=product.js.map
+], Product);
+//# sourceMappingURL=Product.js.map

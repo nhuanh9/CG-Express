@@ -3,15 +3,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const productService_1 = __importDefault(require("../service/productService"));
+const ProductService_1 = __importDefault(require("../service/ProductService"));
 class ProductController {
     constructor() {
         this.findAll = async (req, res) => {
-            let listProduct = await this.productService.getAll();
-            res.json(listProduct);
+            let list = await ProductService_1.default.findAll();
+            res.json(list);
         };
-        this.productService = productService_1.default;
     }
 }
 exports.default = new ProductController();
-//# sourceMappingURL=productController.js.map
+//# sourceMappingURL=ProductController.js.map
