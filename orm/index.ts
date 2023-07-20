@@ -15,3 +15,6 @@ app.use('', router)
 app.listen(3000, () => {
     console.log('Server is running')
 })
+
+//npm i -D typescript tsc tsc-watch rimraf @types/express
+//npm run start:dev
