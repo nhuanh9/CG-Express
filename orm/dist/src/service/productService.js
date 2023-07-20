@@ -6,7 +6,11 @@ class ProductService {
     constructor() {
         this.repository = data_source_1.AppDataSource.getRepository(Product_1.Product);
         this.findAll = async () => {
-            return await this.repository.find();
+            return await this.repository.find({
+                relations: {
+                    category: true
+                }
+            });
         };
         this.add = async (data) => {
             return await this.repository.save(data);

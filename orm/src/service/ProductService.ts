@@ -6,7 +6,11 @@ class ProductService implements Service<Product> {
     private repository = AppDataSource.getRepository(Product);
 
     findAll = async () => {
-        return await this.repository.find();
+        return await this.repository.find({
+            relations: {
+                category: true
+            }
+        });
     }
 
     add = async (data) => {
