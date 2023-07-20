@@ -18,11 +18,15 @@ __decorate([
     __metadata("design:type", Number)
 ], Product.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar", length: 255 }),
     __metadata("design:type", String)
 ], Product.prototype, "name", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar", length: 255 }),
+    __metadata("design:type", String)
+], Product.prototype, "des", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: "int" }),
     __metadata("design:type", Number)
 ], Product.prototype, "price", void 0);
 exports.Product = Product = __decorate([
