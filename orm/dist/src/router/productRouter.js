@@ -8,5 +8,7 @@ const ProductController_1 = __importDefault(require("../controller/ProductContro
 const productRouter = (0, express_1.Router)();
 productRouter.get('', ProductController_1.default.findAll);
 productRouter.post('', ProductController_1.default.add);
+productRouter.put('/:id', ProductController_1.default.update);
+productRouter.delete('/:id', ProductController_1.default.delete);
 exports.default = productRouter;
 //# sourceMappingURL=ProductRouter.js.map

@@ -14,6 +14,14 @@ class ProductController {
             let data = await ProductService_1.default.add(req.body);
             res.json(data);
         };
+        this.update = async (req, res) => {
+            let data = await ProductService_1.default.update(req.params.id, req.body);
+            res.json(data);
+        };
+        this.delete = async (req, res) => {
+            let data = await ProductService_1.default.delete(req.params.id);
+            res.json(data);
+        };
     }
 }
 exports.default = new ProductController();
