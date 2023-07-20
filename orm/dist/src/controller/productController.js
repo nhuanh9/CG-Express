@@ -10,6 +10,10 @@ class ProductController {
             let list = await ProductService_1.default.findAll();
             res.json(list);
         };
+        this.add = async (req, res) => {
+            let data = await ProductService_1.default.add(req.body);
+            res.json(data);
+        };
     }
 }
 exports.default = new ProductController();

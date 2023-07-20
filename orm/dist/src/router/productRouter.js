@@ -7,5 +7,6 @@ const express_1 = require("express");
 const ProductController_1 = __importDefault(require("../controller/ProductController"));
 const productRouter = (0, express_1.Router)();
 productRouter.get('', ProductController_1.default.findAll);
+productRouter.post('', ProductController_1.default.add);
 exports.default = productRouter;
 //# sourceMappingURL=ProductRouter.js.map
