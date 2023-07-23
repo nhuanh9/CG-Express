@@ -5,7 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const ProductController_1 = __importDefault(require("../controller/ProductController"));
+const jwt_1 = require("../middleware/jwt");
 const productRouter = (0, express_1.Router)();
+productRouter.use(jwt_1.auth);
 productRouter.get('', ProductController_1.default.findAll);
 productRouter.post('', ProductController_1.default.add);
 productRouter.put('/:id', ProductController_1.default.update);
